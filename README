@@ -1,4 +1,4 @@
-Acme::Morse::Audible version 1.00
+Acme::Morse::Audible version 1.10
 =================================
 NAME
     Acme::Morse::Audible - Audio(Morse) Programming with Perl
@@ -16,26 +16,35 @@ SYNOPSIS
 DESCRIPTION
     The first time a program is run under "use Acme::Morse::Audible;", it
     will become a playable MIDI file with the Morse encoding of the code.
-    (Dots and dashes encdoding, actually. Morse Code contains only
-    alphabet.) The program will continue to run as it did before, but will
-    now also be audible. (Some players might not play it unless you rename
-    it to .mid.)
+    (Dots and dashes encoding, actually. Morse Code contains only alphabet.)
+    The program will continue to run as it did before, but will now also be
+    audible. (Some players might not play it unless you rename it to .mid.)
+
+  STATUS QUO ANTE BELLUM
+
+            no Acme::Morse::Audible;
+
+    Running the audible program with "no Acme::Morse::Audible;" instead of
+    "use Acme::Morse::Audible;" will make it readable back again (and no
+    longer audible). The "no Acme::Morse::Audible;" has no affect on a
+    readable program.
 
   DIAGNOSTICS
 
     "Cannot record '%s'."
-                Acme::Morse::Audible could not access the source file to modify it.
+        Acme::Morse::Audible could not access the source file to modify it
+        (substitute readability with audibility or vice versa).
 
     "Cannot hear '%s'."
-                Acme::Morse::Audible could not access the source file to execute it or read it for first-time encoding.
+        Acme::Morse::Audible could not access the source file to read it.
+
+SEE ALSO
+    the Acme::Morse manpage, the Acme::Bleach manpage.
 
 AUTHOR
     Ido Trivizki, <trivizki@bigfoot.com>.
 
     Based on Acme::Morse by Damian Conway.
-
-SEE ALSO
-    the Acme::Morse manpage, the Acme::Bleach manpage.
 
 INSTALLATION
 
@@ -45,6 +54,17 @@ INSTALLATION
 	   make
 	   make test
 	   make install
+
+HISTORY
+	Revision history for Perl extension Acme::Morse::Audible.
+
+	1.10  Sun Aug 25 01:45:00 2002
+		- Some bug fixes.
+		- New 'no Acme::Morse::Audible;' feature.
+		- New test cases.
+
+	1.00  Thu Aug 22 15:30:00 2002
+		- original version.
 
 COPYRIGHT AND LICENCE
 
